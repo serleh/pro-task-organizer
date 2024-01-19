@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 
 import List from './List';
 
-export default function TodoList({ tasks, onDeleteTask, onToggleTask }) {
+export default function TodoList({
+  tasks,
+  onDeleteTask,
+  onToggleTask,
+  onClearTask,
+}) {
   const [sortBy, setSortBy] = useState('taskAdded');
   let sortedTasks;
 
@@ -22,14 +27,20 @@ export default function TodoList({ tasks, onDeleteTask, onToggleTask }) {
             key={list.id}
             onDeleteTask={onDeleteTask}
             onToggleTask={onToggleTask}
+            onClearTask={onClearTask}
           />
         ))}
       </ul>
-      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
-        <option value="taskAdded">Sort by task added</option>
-        <option value="completed">Sort by completed</option>
-        <option value="alphabet">Sort alphabetically</option>
-      </select>
+      <div className="sort-clear">
+        <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+          <option value="taskAdded">Sort by task added</option>
+          <option value="completed">Sort by completed</option>
+          <option value="alphabet">Sort alphabetically</option>
+        </select>
+        <button onClick={onClearTask} className="clear">
+          Clear
+        </button>
+      </div>
     </div>
   );
 }

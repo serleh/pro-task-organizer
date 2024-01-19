@@ -12,7 +12,7 @@ export default function Form({ onAddTask }) {
     onAddTask(newTodo);
   }
   return (
-    <div>
+    <div className="form">
       <form onSubmit={addTask}>
         <input
           type="text"
@@ -20,7 +20,7 @@ export default function Form({ onAddTask }) {
           value={task}
           onChange={(e) => setTask(e.target.value)}
         />
-        <button>ADD</button>
+        <button>Add</button>
       </form>
     </div>
   );

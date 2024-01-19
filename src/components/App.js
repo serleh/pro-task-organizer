@@ -3,6 +3,7 @@ import Form from './Form';
 import Header from './Header';
 import TodoList from './TodoList';
 import Info from './Info';
+import '../style.css';
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -23,6 +24,10 @@ function App() {
     );
   }
 
+  function handleClearTask() {
+    setTasks([]);
+  }
+
   return (
     <div className="App">
       <Header />
@@ -31,6 +36,7 @@ function App() {
         tasks={tasks}
         onDeleteTask={handleDeleteTask}
         onToggleTask={handleToggleTask}
+        onClearTask={handleClearTask}
       />
       <Info tasks={tasks} />
     </div>

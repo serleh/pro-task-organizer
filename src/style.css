@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;1,300&family=Crimson+Text:wght@400;600;700&family=Nanum+Myeongjo:wght@400;700&family=Work+Sans:wght@100;200;400;500;600;800;900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Chakra Petch', sans-serif;
+  font-style: italic;
+}
+
+.header img {
+  margin-left: 20px;
+}
+.form {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.form input {
+  width: 300px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #ff3300b3;
+  box-shadow: 0 0 5px #ff3300a7;
+}
+
+.form button {
+  padding: 10px;
+  border-radius: 10px;
+  width: 70px;
+  margin-left: 10px;
+  background: #ff3300b3;
+  color: #fff;
+  font-style: italic;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+.form button:hover {
+  background-color: #b72d0bb8; /* Darker shade when hovered */
+}
+
+ul {
+  list-style-type: square;
+}
+
+li {
+  font-size: 26px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.delete-button {
+  font-size: 20px;
+  color: #ff3300b3;
+  cursor: pointer;
+  margin-left: 200px;
+  align-items: center;
+  margin-top: -22px;
+}
+
+select {
+  width: 250px;
+  padding: 7px;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.clear {
+  width: 100px;
+  margin-left: 50px;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 18px;
+  background-color: #ff3300b3;
+  color: #fff;
+}
+
+.footer {
+  margin-top: 20px;
+  background-color: #ff3300b3;
+  font-size: 25px;
+  text-align: center;
+}
+
+.sort-clear {
+  display: flex;
+  justify-content: space-around;
+}

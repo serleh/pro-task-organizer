@@ -5,13 +5,13 @@ export default function Info({ tasks }) {
   const numOfCompleted = tasks.filter((task) => task.completed).length;
   const percentage = Math.round((numOfCompleted / numOfTask) * 100);
 
-  if (!tasks.length) return <p>Start Adding your tasks</p>;
+  if (!tasks.length) return <p className="footer">Start Adding your tasks</p>;
   return (
     <div>
-      <footer>
+      <footer className="footer">
         <em>
           {percentage === 100
-            ? 'COngratulations, You completed your task🕺🏻'
+            ? 'Congratulations, You completed your task🕺🏻'
             : ` You have ${numOfTask} tasks on your task-board, and completed
             ${percentage}(%) of the task`}
         </em>
